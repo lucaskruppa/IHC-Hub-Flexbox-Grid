@@ -107,9 +107,11 @@ ul {
   gap: 20px;
   justify-content: center;
   margin-top: 20px;
+  
 }
 
 .caixa1 {
+    height: 200px;
   background: lightcoral;
 }
 
