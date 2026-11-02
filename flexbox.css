@@ -1,13 +1,21 @@
+/* Container: o pai. Aqui só a aparência dele */
 .container-flex {
     background-color: #00b8e0;
-    box-sizing: border-box;
-    color: black;
-    padding: 15px;
-    margin: 15px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+    padding: 15px; /* Espaçamento interno entre os items e as bordas do container*/
     border-radius: 10px;
-    align-items: center;
-    justify-content: center;
+    gap: 20px; /* Faz a separação entre os elementos internos (filhos)
+    Só funciona junto com o flex e grid*/
+    display: flex; /* Antes do flex estava organizado em colunas, depois o flex organizou
+    automaticamente em linhas*/
+    flex-direction: row; /* Deixei com direção fixa só por preferencia propria*/
+}
+
+/* Itens: os filhos diretos */
+.item-flex {
+    background-color: #ffb703; /* cor pra deixar visivel a diferença entre os elementos*/
+    color: black;
+    width: 100px;
+    height: 60px;
+    text-align: center;
+    border-radius: 6px;
 }
