@@ -126,3 +126,12 @@ com altura fixa */
 .item-flex-basis-300px {
     flex-basis: 300px;
 }
+
+/* align-self: alinha apenas UM item no eixo, ignorano os outros do container.*/
+.item-flex-align-self-center {
+    align-self: center;
+}
+
+.item-flex-align-self-flex-end {
+    align-self: flex-end;
+}

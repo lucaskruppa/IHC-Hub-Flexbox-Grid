@@ -501,6 +501,50 @@
                 </ol>
             </div>
         </section>
+
+        <section>
+            <h2>align-self: alinhamento individual no eixo transversal</h2>
+
+            <p>
+                A propriedade <code>align-self</code> permite que um único item tenha um alinhamento diferente 
+                do definido pelo container com <code>align-items</code>. O valor padrão é <code>auto</code>: 
+                o item obedece ao container.
+            </p>
+
+            <h3>Item 1 padrão, item 2 center, item 3 flex-end</h3>
+            <div class="container-flex altura-media">
+                <div class="item-flex">1</div>
+                <div class="item-flex item-flex-align-self-center">2</div>
+                <div class="item-flex item-flex-align-self-flex-end">3</div>
+            </div>
+
+            <p><strong>Por que ficou assim???</strong></p>
+
+            <div>
+                <ol>
+                    <li>
+                        <strong>Item 1:</strong> Ficou na configuração padrão do container, 
+                        ficando no começo sem mudar de posição no eixo vertical.
+                    </li>
+
+                    <li>
+                        <strong>Item 2:</strong> Ficou no centro do eixo vertical por causa do 
+                        <code>align-self: center</code>.
+                    </li>
+
+                    <li>
+                        <strong>Item 3:</strong> Ficou posicionado no **final** do container por 
+                        causa do <code>align-self: flex-end</code>.
+                    </li>
+                </ol>
+
+                <p>
+                    NOTE: O <code>align-self</code> tem características parecidas com 
+                    o <code>align-items</code>, a diferença sendo que o último age sobre o posicionamento 
+                    de um único conforme demonstrado nesse caso.
+                </p>
+            </div>
+        </section>
     </main>
 
     <footer>Lucas Kruppa - Engs Campo Real © 2026</footer>
