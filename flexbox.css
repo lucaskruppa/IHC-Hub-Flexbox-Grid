@@ -5,7 +5,7 @@ section h3 {
 
 /* Container: o pai. Aqui só a aparência dele */
 .container-flex {
-    background-color: #00b8e0;
+    background: rgba(255,255,255,0.1);
     padding: 15px; /* Espaçamento interno entre os items e as bordas do container*/
     border-radius: 10px;
     gap: 20px; /* Faz a separação entre os elementos internos (filhos)
