@@ -1,3 +1,8 @@
+/* Espaçamento dos subtítulos das demos */
+section h3 {
+    margin: 20px 0 10px;
+}
+
 /* Container: o pai. Aqui só a aparência dele */
 .container-flex {
     background-color: #00b8e0;
@@ -18,4 +23,17 @@
     height: 60px;
     text-align: center;
     border-radius: 6px;
+}
+
+/* Modificadores de direção: sobrescrevem o flex-direction do .container-flex. */
+.direcao-row-reverse {
+    flex-direction: row-reverse;
+}
+
+.direcao-column {
+    flex-direction: column;
+}
+
+.direcao-column-reverse {
+    flex-direction: column-reverse;
 }
