@@ -22,7 +22,7 @@ section h3 {
     width: 100px;
     height: 60px;
     text-align: center;
-    border-radius: 6px;
+    border-radius: 6px; 
 }
 
 /* Modificadores de direção: sobrescrevem o flex-direction do .container-flex. */
@@ -39,23 +39,23 @@ section h3 {
 }
 
 /* justify-content: distribui o espaço livre ao longo do EIXO PRINCIPAL */
-.jc-flex-start {
+.-flex-start {
     justify-content: flex-start;
 }
 
-.jc-center {
+.justify-content-center {
     justify-content: center;
 }
 
-.jc-flex-end {
+.justify-content-flex-end {
     justify-content: flex-end;
 }
 
-.jc-space-between {
+.justify-content-space-between {
     justify-content: space-between;
 }
 
-.jc-space-around {
+.justify-content-space-around {
     justify-content: space-around;
 }
 
