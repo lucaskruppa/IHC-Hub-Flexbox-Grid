@@ -88,7 +88,17 @@ alinha os itens na vertical.*/
     height: 150px;
 }
 
-/* Remove a altura fixa do item para o stretch poder esticá-lo */
+/* Remove a altura fixa do item para o stretch poder esticá-lo, pois o stretch não funciona em itens
+com altura fixa */
 .item-auto {
     height: auto;
+}
+
+/* flex-wrap: define se os itens podem quebrar para uma nova linha */
+.flex-wrap-nowrap {
+    flex-wrap: nowrap;
+}
+
+.flex-wrap-wrap {
+    flex-wrap: wrap;
 }

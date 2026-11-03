@@ -225,6 +225,69 @@
                 <div class="item-flex">3</div>
             </div>
         </section>
+
+        <section>
+            <h2>flex-wrap: quebra de linha</h2>
+
+            <p>
+                Por padrão, o container mantém todos os itens em uma única linha,
+                mesmo que não caibam, e os itens são comprimidos. Com
+                <code>flex-wrap</code> é possível permitir que eles passem para
+                a linha seguinte.
+            </p>
+
+            <ul>
+                <li><code>nowrap</code> (padrão): todos os itens em uma única linha.</li>
+                <li><code>wrap</code>: os itens que não cabem vão para uma nova linha.</li>
+                <li><code>wrap-reverse</code>: igual ao wrap, mas as novas linhas surgem acima.</li>
+            </ul>
+
+            <h3>nowrap</h3>
+            <div class="container-flex flex-wrap-nowrap">
+                <div class="item-flex">1</div>
+                <div class="item-flex">2</div>
+                <div class="item-flex">3</div>
+                <div class="item-flex">4</div>
+                <div class="item-flex">5</div>
+                <div class="item-flex">6</div>
+                <div class="item-flex">7</div>
+                <div class="item-flex">8</div>
+                <div class="item-flex">9</div>
+                <div class="item-flex">10</div>
+            </div>
+
+            <h3>wrap</h3>
+            <div class="container-flex flex-wrap-wrap">
+                <div class="item-flex">1</div>
+                <div class="item-flex">2</div>
+                <div class="item-flex">3</div>
+                <div class="item-flex">4</div>
+                <div class="item-flex">5</div>
+                <div class="item-flex">6</div>
+                <div class="item-flex">7</div>
+                <div class="item-flex">8</div>
+                <div class="item-flex">9</div>
+                <div class="item-flex">10</div>
+            </div>
+
+            <p><strong>Por que ficou assim???</strong></p>
+
+            <div>
+                <ol>
+                    <li>
+                        Com <code>flex-wrap: nowrap</code>, ao ter muitos elementos que passam do
+                        limite horizontal do container, <strong>o flex comprime os elementos</strong> 
+                        em vés de quebrar a linha. Dessa forma, os elementos diminuem de tamanho para caber
+                        no container.
+                    </li>
+                    <li>
+                        O <code>flex-wrap: wrap</code> trabalha diferente e <strong>quebra as linhas</strong> 
+                        quando passa do limite horizontal do container. Dessa forma, os elementos mantem seu tamanho 
+                        original.
+                    </li>
+                </ol>
+            </div>
+        </section>
     </main>
 
     <footer>Lucas Kruppa - Engs Campo Real © 2026</footer>
