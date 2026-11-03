@@ -88,6 +88,92 @@
             </div>
                 
         </section>
+
+        <section>
+            <h2>justify-content: alinhamento no eixo principal</h2>
+
+            <p>
+                A propriedade <code>justify-content</code> distribui o espaço livre
+                do container ao longo do eixo principal.
+            </p>
+
+            <ul>
+                <li><code>flex-start</code>: itens no início do eixo.</li>
+                <li><code>center</code>: itens no meio do eixo.</li>
+                <li><code>flex-end</code>: itens no fim do eixo.</li>
+                <li><code>space-between</code>: espaço igual entre os itens, sem espaço nas pontas.</li>
+                <li><code>space-around</code>: espaço igual ao redor de cada item.</li>
+            </ul>
+
+            <h3>flex-start</h3>
+            <div class="container-flex jc-flex-start">
+                <div class="item-flex">1</div>
+                <div class="item-flex">2</div>
+                <div class="item-flex">3</div>
+            </div>
+
+            <h3>center</h3>
+            <div class="container-flex jc-center">
+                <div class="item-flex">1</div>
+                <div class="item-flex">2</div>
+                <div class="item-flex">3</div>
+            </div>
+
+            <h3>flex-end</h3>
+            <div class="container-flex jc-flex-end">
+                <div class="item-flex">1</div>
+                <div class="item-flex">2</div>
+                <div class="item-flex">3</div>
+            </div>
+
+            <h3>space-between</h3>
+            <div class="container-flex jc-space-between">
+                <div class="item-flex">1</div>
+                <div class="item-flex">2</div>
+                <div class="item-flex">3</div>
+            </div>
+
+            <h3>space-around</h3>
+            <div class="container-flex jc-space-around">
+                <div class="item-flex">1</div>
+                <div class="item-flex">2</div>
+                <div class="item-flex">3</div>
+            </div>
+
+            <h3>center com flex-direction: column</h3>
+            <div class="container-flex direcao-column jc-center altura-fixa">
+                <div class="item-flex">1</div>
+                <div class="item-flex">2</div>
+                <div class="item-flex">3</div>
+            </div>
+
+            <p><strong>Por que ficou desse jeito????</strong></p>
+
+            <div>
+                <ol>
+                <li>
+                    Com <code>flex-direction: column</code>, o <strong>eixo principal</strong>
+                    passa a ser o vertical.
+                </li>
+                <li>
+                    O <code>justify-content</code> sempre atua no eixo principal. Por isso o
+                    <code>center</code> centralizou o grupo de itens <strong>na vertical</strong>.
+                </li>
+                <li>
+                    Isso só é visível por causa da propriedade height: com
+                    <code>height: 400px</code>, sobram 150px, divididos em 75px acima
+                    e 75px abaixo dos itens, o <code>justify-content</code> trabalha fazendo a centralização
+                    com esse espaço livre.
+                </li>
+                <li>
+                    Na horizontal está o <strong>eixo transversal</strong>, onde o
+                    <code>justify-content</code> não atua. Quem controla esse eixo é o
+                    <code>align-items</code>, que ainda não foi atualizado no código, e por isso os itens
+                    ficam no início (à esquerda).
+                </li>
+            </ol>
+            </div>
+        </section>
     </main>
 
     <footer>Lucas Kruppa - Engs Campo Real © 2026</footer>

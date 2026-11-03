@@ -37,3 +37,30 @@ section h3 {
 .direcao-column-reverse {
     flex-direction: column-reverse;
 }
+
+/* justify-content: distribui o espaço livre ao longo do EIXO PRINCIPAL */
+.jc-flex-start {
+    justify-content: flex-start;
+}
+
+.jc-center {
+    justify-content: center;
+}
+
+.jc-flex-end {
+    justify-content: flex-end;
+}
+
+.jc-space-between {
+    justify-content: space-between;
+}
+
+.jc-space-around {
+    justify-content: space-around;
+}
+
+/* Na demo com column o container precisa de altura:
+   sem ela não sobra espaço livre no eixo vertical */
+.altura-fixa {
+    height: 400px;
+}
