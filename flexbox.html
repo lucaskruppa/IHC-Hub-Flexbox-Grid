@@ -471,6 +471,36 @@
                 </ol>
             </div>
         </section>
+
+        <section>
+            <h2>flex-basis: tamanho inicial do item</h2>
+
+            <p>
+                A propriedade <code>flex-basis</code> define o tamanho inicial do item
+                no eixo principal, antes de ele crescer ou encolher. 
+                Em <code>row</code> ela age sobre a largura, e em <code>column</code>, 
+                sobre a altura.
+            </p>
+
+            <h3>flex-basis: 300px apenas no item 2</h3>
+            <div class="container-flex">
+                <div class="item-flex">1</div>
+                <div class="item-flex item-flex-basis-300px">2</div>
+                <div class="item-flex">3</div>
+            </div>
+
+            <p><strong>Por que ficou assim???</strong></p>
+
+            <div>
+                <ol>
+                    <li>
+                        No caso do item 2, normalmente ele teria o tamnaho 100px de largura, 
+                        mas ao alterar o tamanho mínimo com o <code>flex-basis: 300px</code> 
+                        o tamanho é alterado para 300px
+                    </li>
+                </ol>
+            </div>
+        </section>
     </main>
 
     <footer>Lucas Kruppa - Engs Campo Real © 2026</footer>

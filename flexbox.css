@@ -121,3 +121,8 @@ com altura fixa */
 .item-flex-shrink-0 {
     flex-shrink: 0;
 }
+
+/* flex-basis: define o tamanho inicial de um item no eixo principal.*/
+.item-flex-basis-300px {
+    flex-basis: 300px;
+}
