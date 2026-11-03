@@ -174,6 +174,57 @@
             </ol>
             </div>
         </section>
+
+        <section>
+            <h2>align-items: alinhamento no eixo transversal</h2>
+
+            <p>
+                A propriedade <code>align-items</code> alinha os itens ao longo do
+                eixo transversal, o perpendicular ao eixo principal.
+            </p>
+
+            <ul>
+                <li><code>flex-start</code>: itens no início do eixo transversal.</li>
+                <li><code>center</code>: itens no meio do eixo transversal.</li>
+                <li><code>flex-end</code>: itens no fim do eixo transversal.</li>
+                <li><code>stretch</code> (padrão): itens esticados, desde que não tenham tamanho fixo nesse eixo.</li>
+            </ul>
+
+            <h3>flex-start</h3>
+            <div class="container-flex align-items-flex-start altura-media">
+                <div class="item-flex">1</div>
+                <div class="item-flex">2</div>
+                <div class="item-flex">3</div>
+            </div>
+
+            <h3>center</h3>
+            <div class="container-flex align-items-center altura-media">
+                <div class="item-flex">1</div>
+                <div class="item-flex">2</div>
+                <div class="item-flex">3</div>
+            </div>
+
+            <h3>flex-end</h3>
+            <div class="container-flex align-items-flex-end altura-media">
+                <div class="item-flex">1</div>
+                <div class="item-flex">2</div>
+                <div class="item-flex">3</div>
+            </div>
+
+            <h3>stretch (itens sem altura fixa)</h3>
+            <div class="container-flex align-items-stretch altura-media">
+                <div class="item-flex item-auto">1</div>
+                <div class="item-flex item-auto">2</div>
+                <div class="item-flex item-auto">3</div>
+            </div>
+
+            <h3>column com justify-content: center e align-items: center</h3>
+            <div class="container-flex direcao-column justify-content-center align-items-center altura-fixa">
+                <div class="item-flex">1</div>
+                <div class="item-flex">2</div>
+                <div class="item-flex">3</div>
+            </div>
+        </section>
     </main>
 
     <footer>Lucas Kruppa - Engs Campo Real © 2026</footer>
