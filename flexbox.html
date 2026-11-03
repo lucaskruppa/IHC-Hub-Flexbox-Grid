@@ -87,6 +87,31 @@
                 <div class="item-flex">3</div>
             </div>
                 
+            <p><strong>Por que ficou assim???</strong></p>
+
+            <div>
+                <ol>
+                    <li>
+                        <strong>row (padrão):</strong> Configuração padrão do flexbox, a não ser que seja alterado 
+                        por outra proprieda, vai alinhar os elementos a esquerda da linha por padrão.
+                    </li>
+
+                    <li>
+                        <strong>row-reverse:</strong> Reverte a disposição dos elementos no eixo principal do row, 
+                        ordenando eles da direita para a esquerda na mesma sequência.
+                    </li>
+
+                    <li>
+                        <strong>column:</strong> Alinha os itens no eixo vertical em vés do horizontal padrão, 
+                        mantendo a ordem padrão.
+                    </li>
+
+                    <li>
+                        <strong>column-reverse:</strong> Alinhas os itens no eixo vertical, mas organizando sua 
+                        disposição de forma reversa, mantendo a mesma ordem.
+                    </li>
+                </ol>
+            </div>
         </section>
 
         <section>
@@ -223,6 +248,53 @@
                 <div class="item-flex">1</div>
                 <div class="item-flex">2</div>
                 <div class="item-flex">3</div>
+            </div>
+
+            <p><strong>Por que ficou assim???</strong></p>
+            <p>
+                <strong>NOTE:</strong> Aqui não são utilizados <code>justify-content</code> para denotar as 
+                propriedades individuais dos elementos, o mesmo padrão pode ser observado nos outros casos
+                a não ser que o uso combinado de outros elementos faça-se necessário.
+            </p>
+
+            <div>
+                <ol>
+                    <li><strong>flex-start:</strong> Neste caso o <code>align-items</code> alinha os 
+                    itens no inicio do eixo vertical, pois neste caso o eixo principal é 
+                    o eixo horizontal.
+                    </li>
+
+                    <li><strong>center:</strong> Alinhas os items no centro do eixo vertical, 
+                    deixando-os igualmente espaçados dentro do eixo. 
+                    </li>
+
+                    <li><strong>flex-end:</strong> O caso inverso do <code>flex-start</code>, 
+                    os items são alinhados ao final do eixo vertical.
+                    </li>
+
+                    <li><strong>stretch (itens sem altura fixa):</strong> Neste caso os items foram deixados 
+                    sem altura fixa para que a propriedade do <code>stretch</code> seja aplicada corretamente. 
+                    Os itens ficaram esticados ao longo de todo o eixo veritcal. 
+                    </li>
+
+                    <li><strong>column com <code>justify-content: center</code> e <code>align-items: center</code>:</strong> 
+                    Neste caso específico foi aplicado a exceção mencionado na nota, foi necessário 
+                    fazer uso do <code>justify-content: center</code> para poder mostrar corretamente o 
+                    comportamento esperado: <br>
+                        <ul>
+                            <li>
+                                <code>justify-content: center</code> atua centralizando os itens horizontalmente 
+                                dentro do container.
+                            </li>
+                                
+                            <li>
+                                <code>align-items: center</code> atua centralizando os itens verticalmente
+                                (especificamente no caso dos eixos horizontais)
+                            </li>
+                        </ul>
+
+                    </li>
+                </ol>
             </div>
         </section>
 
