@@ -288,6 +288,53 @@
                 </ol>
             </div>
         </section>
+
+        <section>
+            <h2>flex-grow: crescimento dos itens</h2>
+
+            <p>
+                A propriedade <code>flex-grow</code> define quanto do espaço livre do
+                container um item pode ocupar. O valor padrão é <code>0</code>: o item
+                não cresce. O número funciona como uma proporção entre os itens.
+            </p>
+
+            <h3>flex-grow: 1 apenas no item 2</h3>
+            <div class="container-flex">
+                <div class="item-flex">1</div>
+                <div class="item-flex item-flex-grow-1">2</div>
+                <div class="item-flex">3</div>
+            </div>
+
+            <h3>flex-grow: 1 nos três itens</h3>
+            <div class="container-flex">
+                <div class="item-flex item-flex-grow-1">1</div>
+                <div class="item-flex item-flex-grow-1">2</div>
+                <div class="item-flex item-flex-grow-1">3</div>
+            </div>
+
+            <h3>flex-grow: 1, 2 e 1</h3>
+            <div class="container-flex">
+                <div class="item-flex item-flex-grow-1">1</div>
+                <div class="item-flex item-flex-grow-2">2</div>
+                <div class="item-flex item-flex-grow-1">3</div>
+            </div>
+
+            <p><strong>Por que ficou assim???</strong></p>
+
+            <div>
+                <ol>
+                    <li>
+                        Essas 2 classes utilizadas nesse exemplo mudam o tamanho de um elemento, 
+                        pode ser utilizado em situação em que necessitam que o elemento diminua dinamicamente.
+                    </li>
+                    
+                    <li>
+                        No caso o flex grow aumenta o tamanho, existe também a opção de diminuir o tamanho, 
+                        que será apresentada mais abaixo. 
+                    </li>
+                </ol>
+            </div>
+        </section>
     </main>
 
     <footer>Lucas Kruppa - Engs Campo Real © 2026</footer>
