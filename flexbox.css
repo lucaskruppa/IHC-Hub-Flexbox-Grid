@@ -111,3 +111,13 @@ com altura fixa */
 .item-flex-grow-2 {
     flex-grow: 2;
 }
+
+/* Container mais estreito, para os itens não caberem e o flex-shrink aparecer */
+.largura-estreita {
+    width: 400px;
+}
+
+/* flex-shrink: define se o item pode encolher quando falta espaço (padrão: 1) */
+.item-flex-shrink-0 {
+    flex-shrink: 0;
+}

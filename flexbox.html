@@ -335,6 +335,70 @@
                 </ol>
             </div>
         </section>
+
+        <section>
+            <h2>flex-shrink: encolhimento dos itens</h2>
+
+            <p>
+                A propriedade <code>flex-shrink</code> define se um item pode encolher
+                quando os itens não cabem no container. O valor padrão é <code>1</code>:
+                o item encolhe. Com <code>0</code>, o item mantém o tamanho e pode
+                ultrapassar o container.
+            </p>
+            <ol>
+                <li>
+                    <h3>Padrão: flex-shrink: 1 em todos os itens</h3>
+                    <div class="container-flex largura-estreita">
+                        <div class="item-flex">1</div>
+                        <div class="item-flex">2</div>
+                        <div class="item-flex">3</div>
+                        <div class="item-flex">4</div>
+                    </div>
+                </li>
+            
+                <li>
+                    <h3>flex-shrink: 0 em todos os itens</h3>
+                    <div class="container-flex largura-estreita">
+                        <div class="item-flex item-flex-shrink-0">1</div>
+                        <div class="item-flex item-flex-shrink-0">2</div>
+                        <div class="item-flex item-flex-shrink-0">3</div>
+                        <div class="item-flex item-flex-shrink-0">4</div>
+                    </div>
+                </li>
+
+                <li>
+                    <h3>flex-shrink: 0 apenas no item 3</h3>
+                    <div class="container-flex largura-estreita">
+                        <div class="item-flex">1</div>
+                        <div class="item-flex">2</div>
+                        <div class="item-flex item-flex-shrink-0">3</div>
+                        <div class="item-flex">4</div>
+                    </div>
+                </li>
+            </ol>
+
+            <p><strong>Por que ficou assim???</strong></p>
+
+            <div>
+                <ol>
+                    <li>
+                        <strong>No caso do exemplo 1:</strong> Todos os itens recebem o srink e se adaptam
+                        diminuindo o seu tamanho para caber no container.
+                    </li>
+
+                    <li>
+                        <strong>No caso do exemplo 2:</strong> Nenhum dos items "encolhem", então todos fazem
+                        "overflow" e p item 4 acaba vazando para fora do container.
+                    </li>
+
+                    <li>
+                        <strong>No caso do exemplo 3:</strong> Apenas o elemento 3 mantem seu tamanho original,
+                        o <code>flex-shrink</code> compensa diminuindo <strong>ainda mais</strong> o tamanho
+                        dos outros elementos para caber dentro do container.  
+                    </li>
+                </ol>
+            </div>
+        </section>
     </main>
 
     <footer>Lucas Kruppa - Engs Campo Real © 2026</footer>
