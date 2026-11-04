@@ -34,6 +34,45 @@
                 <li><strong>Célula:</strong> o encontro de uma linha com uma coluna.</li>
             </ul>
         </section>
+
+        <section>
+            <h2>Exemplo 1: grade básica</h2>
+
+            <p>
+                Com <code>display: grid</code>, o container vira uma grade. As colunas
+                são definidas com <code>grid-template-columns</code> e as linhas com
+                <code>grid-template-rows</code>.
+            </p>
+
+            <div class="container-grid grade-basica">
+                <div class="item-grid">1</div>
+                <div class="item-grid">2</div>
+                <div class="item-grid">3</div>
+                <div class="item-grid">4</div>
+                <div class="item-grid">5</div>
+                <div class="item-grid">6</div>
+            </div>
+
+            <p>O CSS essencial desta demonstração:</p>
+
+            <pre><code>.grade-basica {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: repeat(2, 80px);
+                gap: 15px;
+            }</code></pre>
+
+            <ul>
+                <li><code>repeat(3, 1fr)</code>: três colunas de tamanhos iguais. A unidade <code>fr</code> é uma fração do espaço livre do container.</li>
+                <li><code>repeat(2, 80px)</code>: duas linhas, cada uma com 80px de altura.</li>
+                <li><code>gap</code>: espaço entre as células, o mesmo do Flexbox.</li>
+            </ul>
+
+            <p>
+                Repare que os itens não têm largura nem altura definidas: quem define
+                o tamanho de cada um é a célula da grade onde ele está.
+            </p>
+        </section>
     </main>
 
     <footer>Lucas Kruppa - Engs Campo Real © 2026</footer>

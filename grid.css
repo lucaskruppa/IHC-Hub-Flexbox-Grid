@@ -1,0 +1,21 @@
+.container-grid {
+    display: grid;
+    gap: 15px;
+    background-color: #4a4a5a;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.item-grid {
+    display: flex; /* o Flexbox aqui serve só para centralizar o número dentro da célula */
+    justify-content: center;
+    align-items: center;
+    background-color: #06d6a0;
+    color: black;
+    border-radius: 6px;
+}
+
+.grade-basica {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 80px);
+}
