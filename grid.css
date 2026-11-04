@@ -10,7 +10,7 @@
     display: flex; /* o Flexbox aqui serve só para centralizar o número dentro da célula */
     justify-content: center;
     align-items: center;
-    background-color: #06d6a0;
+    background-color: #ffb703;
     color: black;
     border-radius: 6px;
 }
@@ -31,4 +31,30 @@
 
 .item-grid-ocupa-duas-linhas {
     grid-row: span 2;
+}
+
+.layout-de-pagina {
+    grid-template-columns: 150px 1fr;
+    grid-template-rows: 60px 150px 50px;
+    /* cada texto entre aspas é uma linha da grade; cada palavra, uma coluna */
+    grid-template-areas:
+        "cabecalho cabecalho"
+        "menu conteudo"
+        "rodape rodape";
+}
+
+.area-cabecalho {
+    grid-area: cabecalho;
+}
+
+.area-menu {
+    grid-area: menu;
+}
+
+.area-conteudo {
+    grid-area: conteudo;
+}
+
+.area-rodape {
+    grid-area: rodape;
 }

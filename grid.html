@@ -91,7 +91,7 @@
                 as colunas e as linhas da grade.
             </p>
 
-<pre><code>linha de grade:   1         2         3         4
+<pre><code>linha de grade:   1          2          3         4
                   | coluna 1 | coluna 2 | coluna 3 |</code></pre>
 
             <div class="container-grid grade-tamanhos-diferentes">
@@ -126,6 +126,51 @@
                 <li><code>grid-column: 1 / 3</code>: o item começa na linha 1 e termina na linha 3, ocupando as colunas 1 e 2.</li>
                 <li><code>grid-row: span 2</code>: o item ocupa duas linhas a partir da posição em que a colocação automática o colocar.</li>
                 <li>Os demais itens não têm posição definida: o navegador os coloca na próxima célula livre, na ordem do HTML.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Exemplo 3: layout de página com áreas</h2>
+
+            <p>
+                Outra forma de posicionar itens é dar nome às regiões da grade com
+                <code>grid-template-areas</code>. Cada texto entre aspas representa
+                uma linha da grade, e cada palavra dentro dele representa uma coluna.
+                Repetir o mesmo nome em células vizinhas faz essas células virarem
+                uma única área.
+            </p>
+
+            <div class="container-grid layout-de-pagina">
+                <div class="item-grid area-cabecalho">cabeçalho</div>
+                <div class="item-grid area-menu">menu</div>
+                <div class="item-grid area-conteudo">conteúdo</div>
+                <div class="item-grid area-rodape">rodapé</div>
+            </div>
+
+            <p>O CSS essencial desta demonstração:</p>
+
+            <pre><code>.layout-de-pagina {
+                display: grid;
+                grid-template-columns: 150px 1fr;
+                grid-template-rows: 60px 150px 50px;
+                grid-template-areas:
+                    "cabecalho cabecalho"
+                    "menu conteudo"
+                    "rodape rodape";
+                gap: 15px;
+            }
+
+            .area-cabecalho { grid-area: cabecalho; }
+            .area-menu { grid-area: menu; }
+            .area-conteudo { grid-area: conteudo; }
+            .area-rodape { grid-area: rodape; }</code></pre>
+
+            <ul>
+                <li>Há três textos entre aspas, então a grade tem três linhas. Cada texto tem duas palavras, então a grade tem duas colunas.</li>
+                <li>Em <code>"cabecalho cabecalho"</code>, o nome se repete: o cabeçalho ocupa as duas colunas da primeira linha. O rodapé faz o mesmo na última linha.</li>
+                <li><code>grid-area: cabecalho</code> manda o item para a área com esse nome.</li>
+                <li>Cada área precisa formar um retângulo.</li>
+                <li>A ordem dos itens no HTML não importa: cada um vai para a sua área, ao contrário da colocação automática do exemplo 2.</li>
             </ul>
         </section>
     </main>
