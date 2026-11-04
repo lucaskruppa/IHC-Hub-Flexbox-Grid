@@ -143,3 +143,62 @@ com altura fixa */
 .item-flex-order-menos-1 {
     order: -1;
 }
+
+/* Menu interativo: input radio escondido + label estilizado como botão.
+   Não há JavaScript: o CSS lê qual radio está marcado (:checked) */
+.menu-de-disposicao {
+    position: relative;
+}
+
+.entrada-de-opcao {
+    position: absolute;
+    opacity: 0;
+}
+
+.botao-de-opcao {
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 8px 14px;
+    border-radius: 6px;
+    margin: 0 8px 15px 0;
+    cursor: pointer;
+    font-family: monospace;
+}
+
+/* Botão marcado: o label vem logo DEPOIS do input, por isso usamos o + */
+.entrada-de-opcao:checked + .botao-de-opcao {
+    background-color: #00d8ff;
+    color: #000000;
+}
+
+/* Contorno para quem navega com o teclado */
+.entrada-de-opcao:focus-visible + .botao-de-opcao {
+    outline: 2px solid #ffffff;
+}
+
+/* Altura maior que a natural da coluna (250px), para sobrar espaço livre */
+.demonstracao-interativa {
+    height: 350px;
+}
+
+/* Cada regra diz: quando ESTE botão estiver marcado, aplique no container o que vem a seguir */
+#opcao-flex-direction-row:checked ~ .demonstracao-interativa {
+    flex-direction: row;
+}
+
+#opcao-flex-direction-column:checked ~ .demonstracao-interativa {
+    flex-direction: column;
+}
+
+#opcao-justify-content-center:checked ~ .demonstracao-interativa {
+    justify-content: center;
+}
+
+#opcao-justify-content-space-between:checked ~ .demonstracao-interativa {
+    justify-content: space-between;
+}
+
+#opcao-centralizado-nos-dois-eixos:checked ~ .demonstracao-interativa {
+    justify-content: center;
+    align-items: center;
+}
