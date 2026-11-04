@@ -19,3 +19,16 @@
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 80px);
 }
+
+.grade-tamanhos-diferentes {
+    grid-template-columns: 100px 1fr 2fr;
+    grid-template-rows: repeat(3, 70px);
+}
+
+.item-grid-ocupa-duas-colunas {
+    grid-column: 1 / 3; /* da linha de grade 1 até a 3: ocupa as colunas 1 e 2 */
+}
+
+.item-grid-ocupa-duas-linhas {
+    grid-row: span 2;
+}
