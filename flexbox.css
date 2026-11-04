@@ -135,3 +135,11 @@ com altura fixa */
 .item-flex-align-self-flex-end {
     align-self: flex-end;
 }
+
+.item-flex-order-1 {
+    order: 1;
+}
+
+.item-flex-order-menos-1 {
+    order: -1;
+}

@@ -545,6 +545,57 @@
                 </p>
             </div>
         </section>
+
+        <section>
+            <h2>order: mudar a ordem visual dos itens</h2>
+
+            <p>
+                A propriedade <code>order</code> muda a ordem em que os itens são exibidos, sem mudar 
+                a ordem no HTML. Todo item começa com <code>order: 0</code>, e os itens são exibidos do menor 
+                para o maior.
+            </p>
+            <ol>
+                <li>
+                    <h3>Item 1 com <code>order: 1</code></h3>
+                    <div class="container-flex">
+                        <div class="item-flex item-flex-order-1">1</div>
+                        <div class="item-flex">2</div>
+                        <div class="item-flex">3</div>
+                    </div>
+                </li>
+
+                <li>
+                    <h3>Item 3 com <code>order: -1</code></h3>
+                    <div class="container-flex">
+                        <div class="item-flex">1</div>
+                        <div class="item-flex">2</div>
+                        <div class="item-flex item-flex-order-menos-1">3</div>
+                    </div>
+                </li>
+            </ol>
+            
+
+            
+
+            <p><strong>Por que ficou assim???</strong></p>
+
+            <ol>
+                <li>
+                    Como o navegador ordena os itens do menor para o maior, 1 recebe <code>order: 1</code> 
+                    e fica por último na prioridade como os outros são <code>order: 0</code>, 
+                    como os elementos 3 e 2 empatam por prioridade, o desempate ocorre pela ordem do HTML, 
+                    2 vem antes do 3 então é mostrado antes, 1 fica por último, dessa forma: <br>
+                    2 -> 3 -> 1
+                </li>
+
+                <li>
+                    Como o elemento 3 tem a menor prioriade definida em <code>order: -1</code>, ele 
+                    é apresentado por primeiro, e depois a quebra de empate entre 2 e 1 é feito pela ordem 
+                    no HTML, desse forma ficando: <br>
+                    3 -> 1 -> 2
+                </li>
+            </ol>
+        </section>
     </main>
 
     <footer>Lucas Kruppa - Engs Campo Real © 2026</footer>
