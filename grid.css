@@ -58,3 +58,11 @@
 .area-rodape {
     grid-area: rodape;
 }
+
+.grade-interativa {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.grade-interativa .item-grid {
+    min-height: 70px;
+}

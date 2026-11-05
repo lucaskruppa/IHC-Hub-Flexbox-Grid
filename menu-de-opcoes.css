@@ -1,0 +1,27 @@
+.menu-de-disposicao {
+    position: relative;
+}
+
+.entrada-de-opcao {
+    position: absolute;
+    opacity: 0;
+}
+
+.botao-de-opcao {
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 8px 14px;
+    border-radius: 6px;
+    margin: 0 8px 15px 0;
+    cursor: pointer;
+    font-family: monospace;
+}
+
+.entrada-de-opcao:checked + .botao-de-opcao { 
+    background-color: #00d8ff;
+    color: #000000;
+}
+
+.entrada-de-opcao:focus-visible + .botao-de-opcao {
+    outline: 2px solid #ffffff;
+}

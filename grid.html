@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="menu-de-opcoes.css">
     <link rel="stylesheet" href="grid.css">
     <title>Introdução ao Grid</title>
 </head>
@@ -171,6 +172,52 @@
                 <li><code>grid-area: cabecalho</code> manda o item para a área com esse nome.</li>
                 <li>Cada área precisa formar um retângulo.</li>
                 <li>A ordem dos itens no HTML não importa: cada um vai para a sua área, ao contrário da colocação automática do exemplo 2.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Exemplo 4: atividade prática com menu interativo</h2>
+
+            <p>
+                Clique nos botões para trocar a definição da grade e veja como a mesma
+                grade de seis itens se reorganiza. Os botões funcionam só com HTML e
+                CSS: cada um é um <code>input</code> do tipo <code>radio</code>, e o
+                CSS aplica a regra de cada opção enquanto ela estiver marcada
+                (<code>:checked</code>).
+            </p>
+
+            <div class="menu-de-disposicao">
+                <input type="radio" name="grade" id="opcao-tres-colunas-iguais" class="entrada-de-opcao" checked>
+                <label for="opcao-tres-colunas-iguais" class="botao-de-opcao">repeat(3, 1fr)</label>
+
+                <input type="radio" name="grade" id="opcao-duas-colunas-iguais" class="entrada-de-opcao">
+                <label for="opcao-duas-colunas-iguais" class="botao-de-opcao">repeat(2, 1fr)</label>
+
+                <input type="radio" name="grade" id="opcao-colunas-de-tamanhos-diferentes" class="entrada-de-opcao">
+                <label for="opcao-colunas-de-tamanhos-diferentes" class="botao-de-opcao">100px 1fr 2fr</label>
+
+                <input type="radio" name="grade" id="opcao-gap-maior" class="entrada-de-opcao">
+                <label for="opcao-gap-maior" class="botao-de-opcao">gap: 40px</label>
+
+                <input type="radio" name="grade" id="opcao-primeiro-item-ocupa-duas-colunas" class="entrada-de-opcao">
+                <label for="opcao-primeiro-item-ocupa-duas-colunas" class="botao-de-opcao">grid-column: span 2</label>
+
+                <div class="container-grid grade-interativa">
+                    <div class="item-grid">1</div>
+                    <div class="item-grid">2</div>
+                    <div class="item-grid">3</div>
+                    <div class="item-grid">4</div>
+                    <div class="item-grid">5</div>
+                    <div class="item-grid">6</div>
+                </div>
+            </div>
+
+            <ul>
+                <li><code>repeat(3, 1fr)</code>: três colunas iguais, a disposição inicial.</li>
+                <li><code>repeat(2, 1fr)</code>: duas colunas iguais, e os itens passam a ocupar três linhas.</li>
+                <li><code>100px 1fr 2fr</code>: a primeira coluna fica fixa em 100px, e o espaço restante é dividido na proporção de 1 para 2.</li>
+                <li><code>gap: 40px</code>: aumenta o espaço entre as células.</li>
+                <li><code>grid-column: span 2</code>: o item 1 passa a ocupar duas colunas.</li>
             </ul>
         </section>
     </main>
