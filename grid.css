@@ -66,3 +66,24 @@
 .grade-interativa .item-grid {
     min-height: 70px;
 }
+
+#opcao-tres-colunas-iguais:checked ~ .grade-interativa {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+#opcao-duas-colunas-iguais:checked ~ .grade-interativa {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+#opcao-colunas-de-tamanhos-diferentes:checked ~ .grade-interativa {
+    grid-template-columns: 100px 1fr 2fr;
+}
+
+#opcao-gap-maior:checked ~ .grade-interativa {
+    gap: 40px;
+}
+
+/* o ~ acha a grade; depois, dentro dela, o item que for o primeiro filho */
+#opcao-primeiro-item-ocupa-duas-colunas:checked ~ .grade-interativa .item-grid:first-child {
+    grid-column: span 2;
+}
